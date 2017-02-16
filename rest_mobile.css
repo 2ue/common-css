@@ -2,14 +2,27 @@
 * @Author: 2ue
 * @Date:   2016-12-06 16:35:25
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-02-08 20:10:48
+* @Last Modified time: 2017-02-08 20:10:51
 */
 /*在css样式文件中最好不要在开始设置@charset "utf-8",在某些浏览器中解析时会出问题;*/
-html {
-  -webkit-text-size-adjust: 100%;
-  /*最小字体为12px,并且移动端横屏字体保持当前大小*/
-}
+
 /* rest style */
+html {
+  /*最小字体为12px,并且移动端横屏字体保持当前大小*/
+  -webkit-text-size-adjust: 100%;
+}
+/**
+ * 当`body`宽度大于`html`宽度时，某些浏览器会出现内部滚动条，所以给`html、body`设置宽度100%。
+ * 取消部分浏览器点击有阴影。
+ * 优化移动端滚动事件。
+*/
+html,
+body {
+    width: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
 html,
 body,
 div,
@@ -100,6 +113,8 @@ button {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  /*修正select盒模型不一致问题*/
+  box-sizing: content-box;
 }
 input::-moz-focus-inner,
 button::-moz-focus-inner {
@@ -111,6 +126,7 @@ textarea {
   overflow-y: auto;
   resize: none;
 }
+a,
 input[type=button],
 input[type=submit],
 input[type=reset],
@@ -138,36 +154,50 @@ select::-ms-expand {
   display: none;
 }
 
+
 /* project style */
 /* m_表示模块 */
 /* f_表示功能 */
 /* u_表示UI */
 .m_out {
   width: 100%;
-  min-width: 1200px;
+  min-width: 1080px;
 }
 .m_in {
-  width: 1200px;
+  width:1080px;
   margin: 0 auto;
 }
-.f_clearfix {
+.f_clear {
   zoom: 1;
-  /* hasLayout */
 }
-.f_clearfix:before,
-.f_clearfix:after {
+.f_clear:before,
+.f_clear:after {
   display: table;
   content: '';
 }
-.f_clearfix:after {
+.f_clear:after {
   clear: both;
 }
 .f_dib {
-  /*display:inline-blocl兼容IE6/7*/
   display: inline-block;
   zoom: 1;
   *display: inline;
   _display: inline;
+}
+.f_dbk {
+  display: block;
+}
+.f_hide{
+  display: none;
+}
+.f_tal {
+  text-align: left;
+}
+.f_tac {
+  text-align: center;
+}
+.f_tar {
+  text-align: right;
 }
 .f_filter {
   opacity: .5;
@@ -180,13 +210,12 @@ select::-ms-expand {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.f_hide{
-  display: none;
-}
 .f_float {
-  font-size: 0;
   display: inline-block;
-  /* vertical-align: top; */
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  _display: inline;
   text-spacing: -3px;
 }
 .f_left {
@@ -218,6 +247,13 @@ select::-ms-expand {
   /*firefox*/
   -webkit-box-shadow: 0px 1px 5px 0px rgba(9, 2, 4, 0.2);
   /*webkit*/
+}
+.icon {
+  vertical-align: top;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  _display: inline;
 }
 /* vue 隐藏 */
 [v-cloak] {
