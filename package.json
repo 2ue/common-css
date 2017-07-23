@@ -1,13 +1,18 @@
 {
   "name": "rest-css",
-  "version": "0.0.8",
-  "description": "rest css is usually to used",
+  "version": "0.0.9",
+  "description": "some style is usually to used",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pub": "node cssToJs && npm publish"
+    "ctj": "node cssToJs",
+    "pub": "npm publish"
   },
-  "keywords": ["css","rest","normalize"],
+  "keywords": [
+    "css",
+    "rest",
+    "normalize"
+  ],
   "author": {
     "name": "2ue",
     "email": "jie746635835@163.com"
