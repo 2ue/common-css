@@ -1,0 +1,28 @@
+{
+  "name": "rest-css",
+  "version": "0.0.2",
+  "description": "css rest, not most comprehensive, bu usually to used",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pub": "node lib/cssToJs.js && npm publish"
+  },
+  "keywords": ["css","rest","normalize"],
+  "author": {
+    "name": "2ue",
+    "email": "jie746635835@163.com"
+  },
+  "homepage": "https://github.com/2ue/rest-css",
+  "repository": {
+    "type": "git",
+    "ssh": "git@github.com:2ue/rest-css.git",
+    "url": "https://github.com/2ue/rest-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/2ue/rest-css/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "insert-css": "^2.0.0"
+  }
+}

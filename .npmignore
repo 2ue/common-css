@@ -1,0 +1,10 @@
+.idea
+.project
+.vscode
+.histroy
+npm-debug.log
+node_modules/*
+.git
+
+
+cssToJs/*
