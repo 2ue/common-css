@@ -1,5 +1,5 @@
 ## rest-css
-> css rest, not most comprehensive, bu usually to used for me
+> rest css is usually to used"
 ## start
 ``` shell
 npm install --save rest-css

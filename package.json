@@ -1,11 +1,11 @@
 {
   "name": "rest-css",
-  "version": "0.0.2",
-  "description": "css rest, not most comprehensive, bu usually to used",
+  "version": "0.0.8",
+  "description": "rest css is usually to used",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pub": "node lib/cssToJs.js && npm publish"
+    "pub": "node cssToJs && npm publish"
   },
   "keywords": ["css","rest","normalize"],
   "author": {

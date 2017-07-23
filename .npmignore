@@ -1,10 +1,8 @@
+.git
 .idea
 .project
 .vscode
 .histroy
-npm-debug.log
+.log
 node_modules/*
-.git
-
-
 cssToJs/*
