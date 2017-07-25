@@ -5,10 +5,13 @@
 
 const fs = require('fs');
 const path = require('path');
-let cssBuff = fs.readFileSync(path.join(__dirname, '../src/rest.css'),'utf-8').replace(/[\r\n\s]/g, '').replace(/\"/g, "'");
+
+const data = fs.readFileSync(path.join(__dirname, '../src/rest.css'),'utf-8');
+let cssBuff = data.replace(/[\r\n\s]/g, '').replace(/\"/g, "'");
 
 cssBuff = 'module.exports = "' + cssBuff + '"';
+
 fs.writeFileSync(path.join(__dirname, '../dist/rest-css.js'), cssBuff, 'utf-8', function (err, suc) {
     if (err) throw  err;
-    console.log('写入成功！');
+    console.log('success!');
 });
