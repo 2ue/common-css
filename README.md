@@ -1,10 +1,9 @@
-## rest-css
 > some style is usually to used
-## start
+## Start
 ``` shell
 npm install --save rest-css
 ```
-## use
+## Use
 #### you can use it in javascript(maybe vue, react, angluar, etc) directly;
 - in javascript (maybe vue, react, angluar, etc)
 ``` javascript
@@ -18,6 +17,7 @@ import 'rest-css'
 </template>
 <script>
     //引入css, 会自动打包，与在style标签中引入最后打包结果无区别
+    //import css，package autoly
     import 'rest-css'
     export default { }
 </script>
@@ -28,5 +28,5 @@ import 'rest-css'
 ``` css
 @import url('../node_modules/rest-css/rest.css')
 ```
-## 参考
+## Reference
 - [-webkit-text-size-adjust属性说明](http://blog.csdn.net/mxy2013/article/details/49813331)
