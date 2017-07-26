@@ -12,7 +12,7 @@ npm i --save rest-css
 ```
 
 ## Use
-#### you can use it in javascript(maybe vue, react, angluar, etc) directly, as long as you can use javascript. but you sholud keep it importing before all other css files;
+> you can use it in javascript(maybe vue, react, angluar, etc) directly, as long as you can use javascript. but you sholud keep it importing before all other css files;
 - in javascript file
 ``` javascript
 import 'rest-css'
