@@ -112,6 +112,12 @@ button {
   -webkit-appearance: none;
   /*修正select盒模型不一致问题*/
   box-sizing: content-box;
+  /*修正focus蓝框*/
+  outline: none;
+}
+/*修正focus时黄底*/
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
 input::-moz-focus-inner,
 button::-moz-focus-inner {
